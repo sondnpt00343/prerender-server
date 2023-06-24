@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 node:20.3
+FROM --platform=linux/amd64 node:16
 
 ENV CHROME_VERSION=114.0.5735.133-1
 
