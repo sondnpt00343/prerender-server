@@ -2,15 +2,7 @@
 const prerender = require("prerender");
 const cache = require("prerender-redis-cache");
 
-const server = prerender({
-  chromeFlags: [
-    "--headless",
-    "--disable-gpu",
-    "--remote-debugging-port=9222",
-    "--hide-scrollbars",
-    ...process.env?.CHROME_FLAGS?.split("|"),
-  ],
-});
+const server = prerender();
 
 server.use(prerender.sendPrerenderHeader());
 server.use(prerender.blockResources());
