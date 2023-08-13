@@ -1,6 +1,7 @@
 FROM --platform=linux/amd64 node:16
 
-ENV CHROME_VERSION=114.0.5735.133-1
+# https://www.ubuntuupdates.org/ppa/google_chrome?dist=stable
+ENV CHROME_VERSION=115.0.5790.170-1
 
 RUN apt-get update && apt-get install -y \
 	apt-transport-https \

@@ -8,8 +8,7 @@ const server = prerender({
     "--disable-gpu",
     "--remote-debugging-port=9222",
     "--hide-scrollbars",
-    "--window-size=414,736",
-    ...process.env.CHROME_FLAGS.split(","),
+    ...process.env?.CHROME_FLAGS?.split("|"),
   ],
 });
 
