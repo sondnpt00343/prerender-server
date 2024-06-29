@@ -1,13 +1,13 @@
 FROM --platform=linux/amd64 node:16
 
 # https://www.ubuntuupdates.org/ppa/google_chrome?dist=stable
-ENV CHROME_VERSION=115.0.5790.170-1
+ENV CHROME_VERSION=126.0.6478.126-1
 
 RUN apt-get update && apt-get install -y \
 	apt-transport-https \
 	ca-certificates \
 	curl \
-  	gnupg \
+	gnupg \
 	--no-install-recommends \
 	&& wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
 	&& echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list \
@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y \
 
 # Add Chrome as a user
 RUN groupadd -r chrome && useradd -r -g chrome -G audio,video chrome \
-    && mkdir -p /home/chrome && chown -R chrome:chrome /home/chrome
+	&& mkdir -p /home/chrome && chown -R chrome:chrome /home/chrome
 
 RUN mkdir -p /usr/src/app
 
