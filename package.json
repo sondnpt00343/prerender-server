@@ -1,21 +1,21 @@
 {
-  "author": "Prerender.io",
-  "name": "prerender",
-  "description": "Service to prerender Javascript rendered pages for SEO",
-  "version": "5.4.4",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/sondnpt00343/prerender-server"
-  },
-  "dependencies": {
-    "prerender": "5.4.4",
-    "prerender-redis-cache": "0.2.2"
-  },
-  "scripts": {
-    "start": "node server.js"
-  },
-  "engines": {
-    "node": ">=10"
-  }
+    "author": "Prerender.io",
+    "name": "prerender",
+    "description": "Service to prerender Javascript rendered pages for SEO",
+    "version": "5.4.4",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/sondnpt00343/prerender-server"
+    },
+    "dependencies": {
+        "prerender": "^5.21.6",
+        "prerender-redis-cache": "0.2.2"
+    },
+    "scripts": {
+        "start": "node server.js"
+    },
+    "engines": {
+        "node": ">=10"
+    }
 }
